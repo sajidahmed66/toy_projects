@@ -67,7 +67,72 @@ a {
   font-size: 4rem;
   text-transform: capitalize;
 }
+/* nav-btn */
+.nav-btn{
+  position: fixed;
+  z-index: 1;
+  font-size: 2rem;
+  color: var(--primaryColor);
+  top: 0%;
+  left:0%;
+  margin: 2rem 1rem;
+  animation: bounce 2s ease-in-out  infinite;
+}
+/* animation bounce */
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* navbar */
+.nav-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: var(--mainGray);
+  padding-top: 2rem;
+  padding-left: 2rem;
+  transition: var(--mainTransition);
+  /* transform */
+  transform: translateX(-100%);
+}
+.show-nav{
+  transform: translateX(0);
+}
+.nav-close{
+  font-size: 2rem;
+  cursor: pointer;
+}
+.nav-items{
+  list-style-type: none;
+}
+.nav-link{
+  display: block;
+  color: var(--primaryColor);
+  text-transform: capitalize;
+  font-size: 2rem;
+  transition: var(--mainTransition);
+}
+.nav-link:hover{
+  color: var(--mainDark);
+  padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar{
+    width: 30vw;
+    max-width: 20rem;
+  }
+}
 /* end of navbar */
 
 /* header */
