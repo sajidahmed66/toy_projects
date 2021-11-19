@@ -12,7 +12,7 @@
     --mainSpacing: 0.25rem;
     /* can also use generatiev box shadow */
     --lightShadow: 2px 5px 3px 0 rgba(0,0,0,0.25);
-    --darkShadow: 2px 5px 3px 0 rgba(0,0,0,0.25); 
+    --darkShadow: 4px 10px 5px 0 rgba(0,0,0,0.5); 
 }
 
 /*reset  */
@@ -201,9 +201,159 @@ a{
         position: relative
     }
 }
- 
+/* ************************ end ABOUT ***************************** */
+/* ************************ Service ***************************** */
+.service{
+    text-align: center;
+    margin-bottom: 3rem;
 
-/* *************************** end ABOUT ***************************** */
+}
+
+.service-icon{
+    background: var(--primary-color);
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.service-title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.service-text{
+    width: 85%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* setting up media colunm */
+@media screen and (min-width:576px){
+    .services-center{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .service{
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media screen and (min-width:992px){
+    .services-center{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .service{
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+}
+
+@media screen and (min-width:1170px){
+    /* .services-center{
+        display: flex;
+        justify-content: space-between;
+    } */
+    
+    .service{
+        display: flex;
+    }
+    .service-icon{
+        align-self: flex-start;
+    }
+    .service-info{
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+.featured{
+    background: var(--mainWhite);
+}
+
+.tour-card{
+    margin-bottom: 4rem;
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+}
+.tour-card:hover{
+    box-shadow: var(--darkShadow);
+}
+
+.tour-img-container{
+    position: relative
+}
+.tour-date{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+}
+
+.tour-footer{
+    padding: 1.25rem 1.5rem;
+}
+.tour-title{
+    text-transform: uppercase;
+}
+
+.tour-country{
+    color: var(--primary-color);   
+    text-transform: capitalize;
+}
+.tour-country span{
+    padding: 0 0.5rem;
+}
+
+.tour-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour-details p {
+    line-height: 0.2;
+    text-transform: capitalize;
+    color: var(--darkGray);
+    letter-spacing: 0.02rem;
+}
+
+.tour-country{
+    align-self: center;
+}
+
+.tour-link{
+    text-align: center;
+}
+
+@media screen and (min-width:920px){
+    .featured-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .tour-card{
+        flex: 0 0 calc(50% - 1rem);
+        
+    }
+}
+
+@media screen and (min-width:1170px){
+    .featured-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .tour-card{
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+}
+
+/* ************************ end services ************************** */
+/* ************************ featured ************************** */
+/* ************************ end featured ************************** */
 
 
 
