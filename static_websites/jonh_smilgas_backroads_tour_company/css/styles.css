@@ -267,6 +267,10 @@ a{
         margin-bottom: 0.5rem;
     }
 }
+
+/* ************************ end services ************************** */
+/* ************************ featured ************************** */
+
 .featured{
     background: var(--mainWhite);
 }
@@ -351,9 +355,97 @@ a{
     }
 }
 
-/* ************************ end services ************************** */
-/* ************************ featured ************************** */
 /* ************************ end featured ************************** */
+/* ************************ gallery ************************** */
+.gallery{
+    background: var(--mainGray);
+}
+.gallery-img{
+    transition: var(--mainTransition);
+}
+.gallery-img-container{
+    position: relative;
+    background: var(--primary-color);
+}
+.gallery-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%,-50%);
+    color: var(--mainWhite);
+    cursor: pointer;
+    transition: var(--mainTransition);
+    opacity: 0;
+}
+.gallery-img-container:hover .gallery-icon{
+    opacity: 1;
+}
+.gallery-img-container:hover .gallery-img{
+    /* transform: scale(1.1); */
+    opacity: 0.5;
+}
+
+@media screen and (min-width:768px){
+    .gallery-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .gallery-img-container{
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width:992px){
+    .gallery-center{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .gallery-img-container{
+        flex: 0 0 33.33%;
+    }
+}
+/* ************************ end gallery ************************** */
+/* ************************ hotdeals ************************** */
+.input-group{
+    width: 80vw;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.form-control  {
+    flex: 1 1 auto;
+}
+
+.form-control, .btn-submit {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+    background: transparent;
+    outline: none;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-color);
+
+}
+
+::placeholder{
+    color: var(--mainBlack);
+    font-family: 'Lato', sans-serif;
+}
+.btn-submit{
+    border-left: none;
+    cursor: pointer;
+    transition: var(--mainTransition);
+}
+.btn-submit:hover{
+    background: var(--primary-color);
+    color: var(--mainWhite);
+}
+/* ************************ end hotdeals ************************** */
 
 
 
