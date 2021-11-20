@@ -34,8 +34,9 @@ body{
     font-size: 1rem;
 }
 
-/* gobal css */
-img{
+/* ************************ gobal css ***********************************/
+
+img:not(.nav-logo){
     width: 100%;
     display: block;
 }
@@ -118,7 +119,7 @@ a{
 /* ************************* end of navbar **************************** */
 /* *************************=== hero ===************************** */
 .hero{
-    height: 100vh;
+    height: calc(100vh - 62px);
     background: var(--primary-color);
     display: flex;
     align-items: center;
@@ -446,6 +447,166 @@ a{
     color: var(--mainWhite);
 }
 /* ************************ end hotdeals ************************** */
+/* ************************ footer ************************** */
+.footer{
+    background: var(--mainBlack);
+    /* padding: 2rem 0; */
+    color: var(--mainWhite);
+    text-align: center;
+    padding-left:  2rem ;
+    padding-right:  2rem ;
+}
+.footer-links,.footer-icons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.footer-link{
+    color: var(--mainWhite);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    letter-spacing: var(--mainSpacing);
+    transition: var(--mainTransition);
+}
+.footer-link:hover{
+    color: var(--primary-color);
+}
+.footer-icon{
+    /* margin-top: 2rem; */
+    font-size: 1.9rem;
+    color: var(--mainWhite);
+    margin-right: 1rem;
+    transition: var(--mainTransition);
+}
+.footer-icon:hover{
+    color: var(--primary-color);
+    transform: translateY(-10%);
+}
+.copyright{
+    color: var(--mainWhite);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
 
+}
+/* ************************ end footer ************************** */
+/* ************************  navbar ************************** */
+/* .navbar{
+    position: fixed;
+} */
+.nav-icons{
+    display: none;
+}
+.nav-header{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.nav-toggle{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: var(--mainTransition);
+    /* margin-top: .5rem; */
+}
+.nav-toggle:hover{
+    transform: scale(1.2);
+}
+
+.nav-link{
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--mainBlack);
+    transition: var(--mainTransition);
+}
+.nav-link:hover{
+    background: var(--mainGray);
+    color: var(--primary-color);
+    transform: translateX(.5rem);
+}
+.nav-links{
+    height: 0px;
+    overflow: hidden;
+    transition: var(--mainTransition);
+}
+.show-nav{
+    height: 295px;
+}
+@media screen and (min-width: 992px){
+    /* removing the styles from small screen */
+    .nav-toggle{
+        display: none;
+    }
+    .nav-links{
+        display: flex;
+        height: auto;
+    }
+    .nav-icons{
+        display: flex;
+
+    }
+    .nav-center{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1170px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .nav-header{
+        padding:0;
+    }
+    .nav-link{
+        padding: 0;
+    }
+    .nav-link:hover{
+        background: transparent;
+        transform: none;
+    }
+    /* end of removing styles from snall screen */
+    .navbar{
+        padding: 1rem 2rem;
+    }
+    .nav-center{
+        width: 100%;
+    }
+    .nav-link{
+        margin-right: 0.7rem;
+
+    }
+    .nav-icon{
+        margin-right: 0.7rem;
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        transition: var(--mainTransition);
+
+    }
+
+    .nav-icon:hover{
+        transform: translateY(-10%);
+        color: var(--darkGray);
+    }
+}
+/* ************************ end of navbar ************************** */
+/* fixed navbar */
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: var(--mainGray);
+    transition: var(--mainTransition);
+    box-shadow: var(--lightShadow);
+
+}
 

@@ -18,7 +18,35 @@
     <!-- header -->
     <header class="home" id="home">
         <!-- navbar -->
-        <nav></nav>
+        <nav class="navbar">
+            <div class="nav-center">
+                <!-- nav-header -->
+                <div class="nav-header">
+                    <img src='./images/logo.svg' alt="logo" class="nav-logo">
+                    <button type="button" class="nav-toggle" aria-level="nav toggler" id="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <!-- end of nav-header -->
+                <!-- nav-links -->
+                <div class="nav-links" id="nav-links">
+                    <a href="#home" class="nav-link scroll-link">home</a>
+                    <a href="#about" class="nav-link scroll-link">about</a>
+                    <a href="#services" class="nav-link scroll-link">services</a>
+                    <a href="#featured" class="nav-link scroll-link">featured</a>
+                    <a href="#gallery" class="nav-link scroll-link">Gallary</a>
+                </div>
+                <!-- end of nav-links -->
+                <!-- nav social icons -->
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="nav-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="nav-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="nav-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+        </nav>
         <!-- navbar -->
         <!-- hero component -->
         <div class="hero">
@@ -29,7 +57,7 @@
                 <p class="hero-text">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. A perspiciatis id illum nobis rem culpa?
                 </p>
-                <a href="#featured" class="btn-white">
+                <a href="#featured" class="btn-white scroll-link">
                     Explore
                 </a>
             </div>
@@ -371,11 +399,11 @@
     <footer class="section footer">
         <!-- footer link -->
         <div class="footer-links">
-            <a href="#home" class="footer-link">home</a>
-            <a href="#about" class="footer-link">about</a>
-            <a href="#services" class="footer-link">services</a>
-            <a href="#featured" class="footer-link">featured</a>
-            <a href="#gallery" class="footer-link">Gallary</a>
+            <a href="#home" class="footer-link scroll-link">home</a>
+            <a href="#about" class="footer-link scroll-link">about</a>
+            <a href="#services" class="footer-link scroll-link ">services</a>
+            <a href="#featured" class="footer-link  scroll-link">featured</a>
+            <a href="#gallery" class="footer-link scroll-link">Gallary</a>
         </div>
         <!-- footer icon -->
         <div class="footer-icons">
@@ -395,9 +423,10 @@
         </div>
         <!-- end of footer icon -->
         <!-- copyright -->
-        <p class="copyright">&copy; backroads <span class="date">2021</span></p>
+        <p class="copyright">&copy; backroads <span id="date" class="date"></span></p>
     </footer>
     <!-- javascript  -->
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
